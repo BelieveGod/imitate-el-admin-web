@@ -1,19 +1,19 @@
-export default {
-  menus:[
-    {
-      subMenus:[
-        {
-          index:"1",
-          title:"导航1",
-          menuItem:[
-            {
-              index:"1-1",
-              title:"选项1-1"
-            }
-          ]
-        }
-
-      ]
-    }
-  ]
-}
+export default [
+  {
+    index:"1",
+    title:"导航1",
+    hasChild:true,
+    child:[
+      {
+        index:"1-1",
+        title:"导航1-1",
+        hasChild:false
+      }
+    ]
+  },
+  {
+    index:"2",
+    title:"导航2",
+    hasChild:false,
+  }
+]
