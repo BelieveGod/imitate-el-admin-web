@@ -15,5 +15,27 @@ export default [
     index:"2",
     title:"导航2",
     hasChild:false,
+  },
+  {
+    index:"/freeTravel",
+    title:"自由行",
+    hasChild:true,
+    child:[
+      {
+        index:"/country",
+        title:"国家",
+        hasChild:false
+      },
+      {
+        index:"/country/province",
+        title:"省份",
+        hasChild:false
+      },
+      {
+        index:"/country/province/city",
+        title:"城市",
+        hasChild:false
+      }
+    ]
   }
 ]

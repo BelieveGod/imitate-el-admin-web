@@ -21,7 +21,26 @@ export const constantRouterMap = [
         component:(resolve)=>require(['@/views/home'],resolve),
         name:'Dashboard',
         meta:{title:'首页',icon:'index',affix:true,noCache:true}
-      }
+      },
+      {
+        path:'country',
+        meta:{title:'国家'},
+        component:(resolve)=>require(['@/views/freeTravel/country'],resolve),
+        children: [
+          {
+            path:'province',
+            meta:{title:'省份'},
+            component:(resolve)=>require(['@/views/freeTravel/province'],resolve),
+            children:[
+              {
+                path:'city',
+                meta:{title:'城市'},
+                component:(resolve)=>require(['@/views/freeTravel/city'],resolve),
+              }
+            ]
+          },
+        ]
+      },
     ]
   },
   {
@@ -30,6 +49,7 @@ export const constantRouterMap = [
     component:(resolve)=>require(['@/views/test'],resolve),
     hidden:true
   },
+
 ]
 
 export default new Router({

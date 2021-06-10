@@ -7,7 +7,8 @@
             @select="handleSelect"
             background-color="#545c64"
             text-color="#fff"
-            active-text-color="#ffd04b">
+            active-text-color="#ffd04b"
+            router>
         <cascade-menu :menus="menuData"/>
         <!--      <el-submenu index="1">-->
         <!--        <template slot="title">-->
@@ -44,7 +45,7 @@
 
 <script>
     import MENU_DATA from './menuData';
-    import CascadeMenu from "@/Components/CascadeMenu";
+    import CascadeMenu from "@/components/CascadeMenu";
 
     export default {
         name: "index",
