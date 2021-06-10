@@ -66,7 +66,6 @@
             handleSelect(index,indexPath){
                 console.log(index);
                 console.log(indexPath)
-                this.$store.commit('addTagView')
             },
             handleOpen(){
 
